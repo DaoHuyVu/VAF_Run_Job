@@ -79,7 +79,7 @@ fun main(){
                            }
                            totalActivities.forEach { stat ->
                                 val name = "${stat.name.firstname} ${stat.name.lastname}"
-                                var pace = ""
+                                val pace: String
                                 if(stat.movingTime == 0 || stat.distance == 0f){
                                     pace = "00:00"
                                 }
