@@ -10,14 +10,14 @@ fun main(){
     var insertedRemainActivities = false
     val clientId = "126247"
     val clientSecret = "1624d97e749d5eb324fbb47626e40e5e979f461c"
-    val file = File("D://token.txt")
+    val file = File("token.txt")
     if(!file.exists()){
-        println("File token.txt isn't exist")
+        println("File token.txt doesn't exist")
         return
     }
     val lines = file.readLines()
     var refreshToken = lines[1]
-    var accessToken = "1410a99ab45033920c1d7928fe0c26fcf3380c95"
+    var accessToken = lines[0]
 
     fun getToken() = "Bearer $accessToken"
 
